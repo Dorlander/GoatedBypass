@@ -1,0 +1,11 @@
+{
+  "name": "goatedbypass",
+  "version": "1.0.0",
+  "dependencies": [
+    "boost-asio",
+    "boost-algorithm",
+    "openssl",
+    "zlib",
+    "nlohmann-json"
+  ]
+}
