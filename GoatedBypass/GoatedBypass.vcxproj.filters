@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\HttpHelpers">
+      <UniqueIdentifier>{54e83fa5-a35f-4627-8cb7-d316f146c150}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\JsonPatcher">
+      <UniqueIdentifier>{a95afeae-f07a-4534-92e1-99a77e3d4926}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ConfigProxy">
+      <UniqueIdentifier>{f19c6bec-0064-4996-b117-ea64a1569555}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\RiotUtils">
+      <UniqueIdentifier>{ba2a0816-b079-4b89-8847-631202cd1fe8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="HttpHelpers.cpp">
+      <Filter>Source Files\HttpHelpers</Filter>
+    </ClCompile>
+    <ClCompile Include="JsonPatcher.cpp">
+      <Filter>Source Files\JsonPatcher</Filter>
+    </ClCompile>
+    <ClCompile Include="ConfigProxy.cpp">
+      <Filter>Source Files\ConfigProxy</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RiotUtils.cpp">
+      <Filter>Source Files\RiotUtils</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="HttpHelpers.hpp">
+      <Filter>Source Files\HttpHelpers</Filter>
+    </ClInclude>
+    <ClInclude Include="JsonPatcher.hpp">
+      <Filter>Source Files\JsonPatcher</Filter>
+    </ClInclude>
+    <ClInclude Include="ConfigProxy.hpp">
+      <Filter>Source Files\ConfigProxy</Filter>
+    </ClInclude>
+    <ClInclude Include="RiotUtils.hpp">
+      <Filter>Source Files\RiotUtils</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

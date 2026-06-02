@@ -1,0 +1,21 @@
+# Build output
+x64/
+x86/
+Debug/
+Release/
+*.exe
+*.pdb
+*.ilk
+*.obj
+*.lib
+*.exp
+*.log
+
+# VS user-specific files
+*.user
+*.suo
+*.vs/
+.vs/
+
+# vcpkg
+vcpkg_installed/
