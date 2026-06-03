@@ -16,6 +16,7 @@ set(SOURCES
     GoatedBypass/HttpHelpers.cpp
     GoatedBypass/JsonPatcher.cpp
     GoatedBypass/Logger.cpp
+    GoatedBypass/TokenCapture.cpp
     GoatedBypass/RiotUtils.cpp
 )
 
@@ -37,4 +38,5 @@ target_link_libraries(GoatedBypass PRIVATE
     ZLIB::ZLIB
     Crypt32
     ws2_32
+    winhttp
 )

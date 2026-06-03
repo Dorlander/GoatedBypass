@@ -137,6 +137,7 @@
     <ClCompile Include="HttpHelpers.cpp" />
     <ClCompile Include="JsonPatcher.cpp" />
     <ClCompile Include="Logger.cpp" />
+    <ClCompile Include="TokenCapture.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="RiotUtils.cpp" />
   </ItemGroup>
@@ -145,6 +146,7 @@
     <ClInclude Include="HttpHelpers.hpp" />
     <ClInclude Include="JsonPatcher.hpp" />
     <ClInclude Include="Logger.hpp" />
+    <ClInclude Include="TokenCapture.hpp" />
     <ClInclude Include="RiotUtils.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

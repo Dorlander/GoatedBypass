@@ -1,0 +1,3 @@
+C:/Users/User/Desktop/Goated/build/CMakeFiles/GoatedBypass.dir
+C:/Users/User/Desktop/Goated/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/User/Desktop/Goated/build/CMakeFiles/ZERO_CHECK.dir
