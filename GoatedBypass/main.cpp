@@ -1,5 +1,6 @@
 #include "ConfigProxy.hpp"
 #include "RiotUtils.hpp"
+#include "FakeVanguard.hpp"
 
 #include <iostream>
 #include <thread>
@@ -58,6 +59,8 @@ int main()
         std::cout << "Vanguard is still installed!" << std::endl;
         return 1;
 	}
+
+    RiotUtils::patchProductSettings();
 
     ConfigProxy proxy;
 

@@ -11,4 +11,5 @@ namespace RiotUtils
 	extern bool isVanguardInstalled();
 	extern bool runRiotClient(uint16_t configPort);
 	extern void terminateRiotServices();
-} 
+	extern void patchProductSettings();
+}

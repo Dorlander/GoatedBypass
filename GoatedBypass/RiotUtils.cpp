@@ -211,6 +211,43 @@ bool RiotUtils::runRiotClient(uint16_t configPort)
 	return true;
 }
 
+void RiotUtils::patchProductSettings()
+{
+    auto env = GetEnv("PROGRAMDATA");
+    fs::path programData = env ? fs::path(*env) : fs::path("C:\\ProgramData");
+
+    const fs::path metaDir = programData / "Riot Games" / "Metadata";
+    if (!fs::exists(metaDir)) return;
+
+    for (const auto& entry : fs::recursive_directory_iterator(metaDir))
+    {
+        if (entry.path().extension() != ".yaml") continue;
+        if (entry.path().filename().string().find("product_settings") == std::string::npos) continue;
+
+        std::ifstream in(entry.path());
+        if (!in) continue;
+
+        std::string content((std::istreambuf_iterator<char>(in)), std::istreambuf_iterator<char>());
+        in.close();
+
+        bool patched = false;
+        auto pos = content.find("vanguard: true");
+        while (pos != std::string::npos)
+        {
+            content.replace(pos, std::string("vanguard: true").size(), "vanguard: false");
+            patched = true;
+            pos = content.find("vanguard: true", pos + 1);
+        }
+
+        if (patched)
+        {
+            std::ofstream out(entry.path());
+            out << content;
+            std::cout << "[+] Patched: " << entry.path().filename().string() << std::endl;
+        }
+    }
+}
+
 void RiotUtils::terminateRiotServices()
 {
 	std::vector<std::wstring> names = { L"RiotClientServices.exe", L"RiotClient.exe", L"LeagueClient.exe", L"League of Legends.exe", L"VALORANT.exe", L"RiotClientUx.exe", L"RiotClientCrashHandler.exe" };
