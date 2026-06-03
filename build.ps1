@@ -17,8 +17,14 @@ if (-not (Test-Path $VcpkgExe)) {
 # --- 2. Configure with CMake ---
 Write-Host "[*] Configuring CMake..." -ForegroundColor Cyan
 $BuildDir = "$Root\build"
+
+# Clean stale cache to avoid wrong VS instance being used
+if (Test-Path "$BuildDir\CMakeCache.txt") {
+    Remove-Item "$BuildDir\CMakeCache.txt" -Force
+}
+
 cmake -B $BuildDir `
-      -DCMAKE_BUILD_TYPE=Release `
+      -G "Visual Studio 17 2022" -A x64 `
       -DCMAKE_TOOLCHAIN_FILE="$VcpkgDir\scripts\buildsystems\vcpkg.cmake" `
       -DVCPKG_TARGET_TRIPLET=x64-windows-static `
       -S $Root

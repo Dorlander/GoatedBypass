@@ -25,6 +25,8 @@ target_compile_definitions(GoatedBypass PRIVATE
     _WIN32_WINNT=0x0601
     WIN32_LEAN_AND_MEAN
     NOMINMAX
+    UNICODE
+    _UNICODE
 )
 
 target_link_libraries(GoatedBypass PRIVATE
