@@ -63,6 +63,12 @@ std::string JsonPatcher::patchNovgkOnly(const std::string& body)
     setKey(j, "lion.vanguard.required", false);
     setKey(j, "lion.vanguard.netrequired", false);
 
+    // Force mobile/embedded client mode - may bypass kernel vanguard check
+    setKey(j, "lol.client_settings.vanguard.mobile_client", true);
+    setKey(j, "anticheat.vanguard.mobile", true);
+    setKey(j, "keystone.client.feature_flags.mobileClient.enabled", true);
+    setKey(j, "lol.client_settings.vanguard.type", "embedded");
+
     removeVanguardDependencies(j, "keystone.products.lion.patchlines.live");
     removeVanguardDependencies(j, "keystone.products.league_of_legends.patchlines.live");
     removeVanguardDependencies(j, "keystone.products.league_of_legends.patchlines.pbe");

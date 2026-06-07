@@ -19,3 +19,19 @@ Release/
 
 # vcpkg
 vcpkg_installed/
+
+# Research dumps (too large for git, not needed for build)
+*.bin
+*.dmp
+*.flow
+api_dump.json
+api_dump.txt
+api_help.txt
+memory_tokens.txt
+vanguard_dump.json
+nt_exports.txt
+textdump.txt
+
+# Driver build artifacts
+TestDriver/*.sys
+TestDriver/*.obj
